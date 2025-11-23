@@ -40,7 +40,7 @@ npm install
 
 ```bash
 cd ~/MagicMirror/modules
-git clone https://github.com/YOUR-USERNAME/MMM-ClickToNavigate.git
+git clone https://github.com/Aws505/MMM-ClickToNavigate.git
 ```
 
 ### Step 2: Install Dependencies
