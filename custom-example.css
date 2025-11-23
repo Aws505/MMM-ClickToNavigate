@@ -1,0 +1,361 @@
+/*
+ * MMM-ClickToNavigate Example Styles
+ *
+ * This file shows examples of how to style clickable modules.
+ * Copy these styles to ~/MagicMirror/css/custom.css
+ */
+
+/* ============================================
+   BASIC HOVER EFFECTS
+   ============================================ */
+
+/* Add pointer cursor to clickable modules */
+.weather,
+.clock,
+.calendar,
+.currentweather,
+.weatherforecast,
+.newsfeed {
+  cursor: pointer !important;
+}
+
+/* Simple opacity hover effect */
+.weather:hover,
+.clock:hover,
+.calendar:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+/* ============================================
+   SCALE EFFECTS
+   ============================================ */
+
+/* Subtle scale-up on hover */
+.weather:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+/* Larger scale for emphasis */
+.clock:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* ============================================
+   BORDER & OUTLINE EFFECTS
+   ============================================ */
+
+/* Subtle border on hover */
+.calendar:hover {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 5px;
+  transition: all 0.2s ease;
+}
+
+/* Glowing outline */
+.weather:hover {
+  outline: 2px solid rgba(100, 200, 255, 0.6);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+
+/* Animated border */
+.clock:hover {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  padding: 10px;
+  animation: pulse-border 1.5s infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* ============================================
+   BACKGROUND EFFECTS
+   ============================================ */
+
+/* Background highlight on hover */
+.newsfeed:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  transition: background-color 0.2s ease;
+}
+
+/* Gradient background */
+.weatherforecast:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(100, 200, 255, 0.1) 0%,
+    rgba(200, 100, 255, 0.1) 100%
+  );
+  border-radius: 12px;
+  padding: 15px;
+}
+
+/* ============================================
+   GLOW & SHADOW EFFECTS
+   ============================================ */
+
+/* Text glow */
+.clock:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Box shadow on hover */
+.calendar:hover {
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+/* Colored glow for weather */
+.weather:hover {
+  box-shadow: 0 0 20px rgba(100, 200, 255, 0.4);
+  border-radius: 12px;
+}
+
+/* ============================================
+   ANIMATED EFFECTS
+   ============================================ */
+
+/* Bounce effect on hover */
+.compliments:hover {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Shake effect */
+.MMM-Timer:hover {
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Pulse effect */
+.MMM-LaunchBrowser:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+/* ============================================
+   COMBINED EFFECTS (recommended)
+   ============================================ */
+
+/* Weather module - Blue glow + scale */
+.weather:hover,
+.currentweather:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(100, 200, 255, 0.3);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+/* Clock module - White glow + slight lift */
+.clock:hover {
+  transform: translateY(-3px) scale(1.02);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease;
+}
+
+/* Calendar module - Subtle border + background */
+.calendar:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+/* Forecast - Gradient background + border */
+.weatherforecast:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(100, 200, 255, 0.1) 0%,
+    rgba(200, 100, 255, 0.1) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   ACCESSIBILITY - ACTIVE STATE
+   ============================================ */
+
+/* Show visual feedback on click */
+.weather:active,
+.clock:active,
+.calendar:active {
+  opacity: 0.6;
+  transform: scale(0.98);
+  transition: all 0.1s ease;
+}
+
+/* ============================================
+   MOBILE/TOUCH OPTIMIZATIONS
+   ============================================ */
+
+/* Larger hit areas for touch */
+@media (pointer: coarse) {
+  .weather,
+  .clock,
+  .calendar {
+    padding: 15px !important;
+  }
+}
+
+/* Remove hover effects on touch devices (optional) */
+@media (hover: none) {
+  .weather:hover,
+  .clock:hover,
+  .calendar:hover {
+    /* Disable hover effects on touch-only devices */
+    transform: none;
+    opacity: 1;
+  }
+
+  /* Show active state instead */
+  .weather:active,
+  .clock:active,
+  .calendar:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+}
+
+/* ============================================
+   CUSTOM MODULE SPECIFIC STYLES
+   ============================================ */
+
+/* Smart home modules */
+.MMM-Temperature:hover {
+  color: #ff6b6b;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+.MMM-SmartTouch:hover {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* Media modules */
+.MMM-NowPlayingOnSpotify:hover {
+  box-shadow: 0 0 20px rgba(30, 215, 96, 0.4);
+  border-radius: 15px;
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+/* ============================================
+   THEME VARIATIONS
+   ============================================ */
+
+/* Minimal theme */
+.minimal-clickable:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+/* Bold theme */
+.bold-clickable:hover {
+  transform: scale(1.1);
+  font-weight: bold;
+  text-shadow: 0 0 10px currentColor;
+  transition: all 0.2s ease;
+}
+
+/* Neon theme */
+.neon-clickable:hover {
+  color: #0ff;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 15px #0ff;
+  transition: all 0.2s ease;
+}
+
+/* ============================================
+   HELPER CLASSES
+   ============================================ */
+
+/* Apply to any element to make it obviously clickable */
+.clickable-highlight {
+  cursor: pointer !important;
+}
+
+.clickable-highlight:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+/* Subtle clickable indicator */
+.clickable-subtle {
+  cursor: pointer !important;
+  opacity: 0.9;
+}
+
+.clickable-subtle:hover {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Use transform and opacity for better performance */
+.weather,
+.clock,
+.calendar,
+.weatherforecast,
+.newsfeed {
+  will-change: transform, opacity;
+}
+
+/* Smooth hardware-accelerated transitions */
+* {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}

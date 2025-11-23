@@ -1,0 +1,36 @@
+{
+  "name": "mmm-clicktonavigate",
+  "version": "1.0.0",
+  "description": "MagicMirror² module for click-to-navigate page switching",
+  "main": "MMM-ClickToNavigate.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR-USERNAME/MMM-ClickToNavigate.git"
+  },
+  "keywords": [
+    "magicmirror",
+    "module",
+    "navigation",
+    "click",
+    "pages",
+    "touch",
+    "interactive"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YOUR-USERNAME/MMM-ClickToNavigate/issues"
+  },
+  "homepage": "https://github.com/YOUR-USERNAME/MMM-ClickToNavigate#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "MMM-pages": "*"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
