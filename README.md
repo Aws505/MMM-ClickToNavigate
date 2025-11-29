@@ -14,6 +14,10 @@ A MagicMirror² module that enables click-to-navigate functionality for page nav
 - **Auto-reattachment** - Handlers persist across DOM updates
 - **Zero visual footprint** - Completely invisible module
 
+## Screenshot
+
+![screenshot](screenshot.png)
+
 ## How It Works
 
 MMM-ClickToNavigate monitors the DOM for elements with specific CSS classes and adds click handlers that send navigation notifications to MMM-pages.
